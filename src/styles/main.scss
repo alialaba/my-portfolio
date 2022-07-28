@@ -1,0 +1,83 @@
+@import "./config/breakpoints";
+@import "./config/colors";
+@import "./config/common";
+
+@import "./local/fonts";
+@import "./local/resets";
+
+/**************************/
+/*HEADER BASIC STYLES*/
+/*************************/
+.header{
+    background-color: $navy;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+     /* Because we want header to be sticky later */
+     padding: 0 3.8rem;
+     height: 9rem;
+     position: relative;
+
+
+     &-logo-wrap{
+       display: flex;
+       align-items: center;
+     }
+     &-logo-img{
+        height: 2rem;
+        // font-size: 2rem;
+     }
+     &-logo-text{
+        text-decoration: none;
+        color: $lightest-slate;
+        font-family: $font-mono;
+        margin-left: 1rem;
+     }
+
+     //Nav list
+     
+     &-nav-list{
+        display: flex;
+        align-items: center;
+        // padding: 0 2rem;
+
+    }
+
+    &-nav-link:link,
+    &-nav-link:visited{
+        display: inline-block;
+        text-decoration: none;
+        margin: 0 1.5rem;
+        color: $lightest-slate;
+        font-family:   $font-mono;
+        font-weight: 500;
+        transition: all 0.3s;
+
+        &:hover,
+        &:active{
+            color: $br-dark-green;
+        }
+
+    }
+    
+    &-toggle{
+        display:none;
+    }
+
+   
+//mobile + tablet 
+     @media #{$break1}, #{$break2}{
+        padding: 0 2.8rem;
+
+&-nav{
+    display: none;
+}
+        &-toggle{
+            display:block;
+        }
+}
+
+}
+
