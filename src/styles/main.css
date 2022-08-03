@@ -1,0 +1,210 @@
+@charset "UTF-8";
+/* CDN variables
+Colors Variables
+Responsive Design Breakpoints Variables
+Language Support Variables
+Main Z-Index layers
+Other variables which don’t fit into the other parts. */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, video, picture, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+* {
+  margin: 0;
+}
+
+/**************************/
+/*HEADER BASIC STYLES*/
+/*************************/
+.header {
+  background-color: #0a192f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Because we want header to be sticky later */
+  padding: 0 3.8rem;
+  height: 7rem;
+  position: relative;
+}
+
+.header-logo__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-logo__img {
+  height: 2.5rem;
+}
+
+.header-logo__text {
+  text-decoration: none;
+  color: #ccd6f6;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  margin-left: 1rem;
+}
+
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header-nav__list > * + * {
+  margin: 0  0 0 2.5rem;
+}
+
+.header-nav__link:link, .header-nav__link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #ccd6f6;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-weight: 500;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.header-nav__link:link:hover, .header-nav__link:link:active, .header-nav__link:visited:hover, .header-nav__link:visited:active {
+  color: #64ffda;
+}
+
+.header-nav__cta {
+  display: inline-block;
+  text-decoration: none;
+  color: #64ffda;
+  border: 1px solid #64ffda;
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+}
+
+.header-nav__cta:hover, .header-nav__cta:active {
+  background-color: rgba(100, 255, 218, 0.1);
+}
+
+.header-toggle {
+  display: none;
+}
+
+@media (max-width: 499px), (min-width: 500px) and (max-width: 768px) {
+  .header {
+    padding: 0 2rem;
+  }
+  .header-nav {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #0a192f;
+    height: 100vh;
+    width: 50%;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  .header-nav__active {
+    display: block;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .header-nav__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 8rem;
+  }
+  .header-nav__list > * + * {
+    margin: 3rem 0 0 0;
+  }
+  .header-toggle {
+    display: block;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    z-index: 999;
+  }
+  .header-toggle--isToggle {
+    color: #64ffda;
+    font-size: 2rem;
+  }
+  .header-toggle--isToggle[name="close-outline"] {
+    display: none;
+  }
+  .header-nav__active .header-toggle--isToggle[name="close-outline"] {
+    display: none;
+  }
+  .header-nav__active .header-toggle--isToggle[name="menu-active"] {
+    display: block;
+  }
+}
+
+@media (min-width: 1001px) {
+  .header-nav__link {
+    font-size: 0.875rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */
