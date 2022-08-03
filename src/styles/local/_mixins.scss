@@ -1,0 +1,14 @@
+@mixin btn {
+    display: inline-block;
+    text-decoration: none;
+    color:$br-dark-green;
+    border:1px solid $br-dark-green;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    font-size: $fz-sm;
+    letter-spacing: 1px;
+    &:hover,
+    &:active{
+        background-color: $green-tint ;
+    }
+}

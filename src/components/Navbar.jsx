@@ -1,26 +1,32 @@
-
-export default function Header(){
+import logo from "../assets/logo.png";
+import {HiOutlineMenuAlt3} from "react-icons/hi";
+import {VscChromeClose} from "react-icons/vsc";
+export default function Header({onToggle}){
 return(
 <header className="header">
-        <a href="#" className="header-logo-wrap">
-            <img className="header-logo-img" src="https://raw.githubusercontent.com/alialaba/myPortfolio/main/assets/logo.png" alt="logo" className="logo-mine" />
-            <span className="header-logo-text is-greeting" id="dev-greet">Ali.dev
+        <a href="#" className="header-logo__wrap">
+            <img className="header-logo__img" src={logo} alt="logo"  />
+            <span className="header-logo__text is-greeting" >Ali.dev
            
             </span>
         </a>
         <nav className="header-nav">
-            <ul className="header-nav-list">
-                    <li className="header-nav-item"><a href="#" className="header-nav-link">About</a></li>
-                    <li className="header-nav-item"><a href="#" className="header-nav-link">Experience</a></li>
-                    <li className="header-nav-item"><a href="#" className="header-nav-link">Work</a></li>
-                    <li className="header-nav-item"><a href="#" className="header-nav-link">Contact</a></li>
-                    <li className="header-nav-item"><a href="#" className="header-nav-link header-nav-link__cta btn">Resume</a></li>
+            <ul className="header-nav__list">
+                    <li className="header-nav__item"><a href="#" className="header-nav__link">About</a></li>
+                    <li className="header-nav__item"><a href="#" className="header-nav__link">Experience</a></li>
+                    <li className="header-nav__item"><a href="#" className="header-nav__link">Work</a></li>
+                    <li className="header-nav__item"><a href="#" className="header-nav__link">Contact</a></li>
+                    <li><div className="header-nav__btn"><a href="#" className=" header-nav__cta btn">Resume</a></div></li>
             </ul>
+        {/* <div className="header-nav__btn"><a href="#" className=" header-nav__cta btn">Resume</a></div> */}
         </nav>
-        <button className="header-toggle">
-            <ion-icon className="header-is-toggle" name="menu-outline"></ion-icon>
-            <ion-icon className="header-is-toggle" name="close-outline"></ion-icon>
+        <button className="header-toggle" onClick={onToggle}>
+            <HiOutlineMenuAlt3 className="header-toggle--isToggle" name="menu-outline"/>
+            <VscChromeClose className="header-toggle--isToggle" name="close-outline"/>
+            {/* <ion-icon className="header-toggle--isToggle" name="menu-outline"></ion-icon> */}
+            {/* <ion-icon className="header-toggle--isToggle" name="close-outline"></ion-icon> */}
         </button>
+        
     </header>
 
 );

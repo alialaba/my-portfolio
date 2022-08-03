@@ -5,10 +5,16 @@
 @import "./local/fonts";
 @import "./local/resets";
 
+
+@import "./local/mixins";
+
 /**************************/
 /*HEADER BASIC STYLES*/
 /*************************/
+
 .header{
+
+    
     background-color: $navy;
     display: flex;
     justify-content: space-between;
@@ -17,19 +23,19 @@
 
      /* Because we want header to be sticky later */
      padding: 0 3.8rem;
-     height: 9rem;
+     height: 7rem;
      position: relative;
 
 
-     &-logo-wrap{
+     &-logo__wrap{
        display: flex;
        align-items: center;
      }
-     &-logo-img{
-        height: 2rem;
+     &-logo__img{
+        height: 2.5rem;
         // font-size: 2rem;
      }
-     &-logo-text{
+     &-logo__text{
         text-decoration: none;
         color: $lightest-slate;
         font-family: $font-mono;
@@ -37,21 +43,33 @@
      }
 
      //Nav list
-     
-     &-nav-list{
+     &-nav{
+     display:flex; 
+     align-items: center;
+     justify-content: center;
+     }
+    
+     &-nav__list{
         display: flex;
         align-items: center;
+        justify-content: center;
         // padding: 0 2rem;
-
     }
 
-    &-nav-link:link,
-    &-nav-link:visited{
+    //make a comment pls
+    &-nav__list > * + *{
+        margin: 0  0 0 2.5rem;
+    }
+    
+
+    &-nav__link:link,
+    &-nav__link:visited{
         display: inline-block;
         text-decoration: none;
-        margin: 0 1.5rem;
+       
         color: $lightest-slate;
         font-family:   $font-mono;
+        // font-size: $fz-sm;
         font-weight: 500;
         transition: all 0.3s;
 
@@ -59,25 +77,89 @@
         &:active{
             color: $br-dark-green;
         }
-
     }
+
+&-nav__cta{
+    @include btn;
+}
     
     &-toggle{
         display:none;
     }
 
-   
+
 //mobile + tablet 
-     @media #{$break1}, #{$break2}{
-        padding: 0 2.8rem;
+ @media #{$break1}, #{$break2}{
+
+
+        padding: 0 2rem;
 
 &-nav{
     display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $navy;
+    height: 100vh;
+    width: 50%;
+    transform: translateX(100%);
 }
-        &-toggle{
-            display:block;
-        }
+
+//active mode
+&-nav__active{
+    display: block;
+    transform: translateX(0);
 }
+
+&-nav__list{
+    flex-direction: column;
+    margin-top: 8rem;
+}
+&-nav__list > * + *{
+    margin: 3rem 0 0 0;
+}
+&-toggle{
+  display:block;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  z-index: 999;
+}
+ &-toggle--isToggle{
+    color: $br-dark-green;
+    font-size: 2rem;
+}
+
+&-toggle--isToggle[name="close-outline"]{
+    display: none;
+}
+
+//active mode
+&-nav__active &-toggle--isToggle[name="close-outline"]{
+    display: none;
+}
+
+&-nav__active &-toggle--isToggle[name="menu-active"]{
+    display: block;
+}
+}
+
+
+
+@media #{$break3}{
+
+    
+&-nav__link{
+        font-size: $fz-sm;
+}
+
+
+
+}
+
+
 
 }
 
