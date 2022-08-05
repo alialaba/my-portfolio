@@ -97,7 +97,7 @@
 &-nav{
     display: none;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     background-color: $navy;
@@ -106,8 +106,8 @@
     transform: translateX(100%);
 }
 
-//active mode
-&-nav__active{
+//open mode
+&-nav__open{
     display: block;
     transform: translateX(0);
 }
@@ -136,13 +136,15 @@
     display: none;
 }
 
-//active mode
-&-nav__active &-toggle--isToggle[name="close-outline"]{
-    display: none;
+//open mode
+&-nav__open &-toggle--isToggle[name="close-outline"]{
+    display: block;
+    
 }
 
-&-nav__active &-toggle--isToggle[name="menu-active"]{
-    display: block;
+&-nav__open &-toggle--isToggle[name="menu-outline"]{
+    display: none;
+    
 }
 }
 
