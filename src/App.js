@@ -1,5 +1,10 @@
 import { useState } from "react";
+import AboutSection from "./components/AboutSection";
+import ContactSection from "./components/ContactSection";
+import ExperienceSection from "./components/ExperienceSection";
 import Navbar from "./components/Navbar"
+import ProfileSection from "./components/ProfileSection";
+import WorkSection from "./components/WorkSection";
 
 export default function App() {
 
@@ -26,7 +31,13 @@ export default function App() {
   return (
     <div className="App">
     <Navbar onToggle={navToggle} openState={openState} toggledIcon={toggledIcon}/>
-    
+<main className="main ">
+  <ProfileSection/>
+  <AboutSection/>
+  <ExperienceSection/>
+  <WorkSection/>
+  <ContactSection/>
+</main> 
     </div>
   );
 }
