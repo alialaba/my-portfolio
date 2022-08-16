@@ -81,6 +81,7 @@
 
 &-nav__cta{
     @include btn;
+    padding: .5rem 1rem;
 }
     
     &-toggle{
@@ -101,8 +102,8 @@
     top: 0;
     right: 0;
     background-color: $navy;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     height: 100vh;
     width: 50%;
     transform: translateX(100%);
@@ -155,7 +156,7 @@
 
 
 
-@media #{$break3}{
+@media #{$break4}{
 
     
 &-nav__link{
@@ -177,22 +178,99 @@
     width: 90%;
 }
 .main{
-    //moble tablet
-    @media #{$break1}, #{$break2}{
-        .overlay{
-            // position: fixed;
-            // top: 0;
-            // left: 0;
-            // width: 100%;
-            // height: 100%;
-            // opacity: 0.7;
-            // visibility: visible;
-            // transition: opacity .35s, visibility .35s, height .35s;
-            // overflow: hidden;
-            // background: $navy;
-            // filter: blur(5px) brightness(0.7);
-            // z-index: -1;
+    .hero-section{
+        background-color: $navy;
+        padding: 4rem 0 9.6rem 0;
+        // &-content{
+        //     width: 80%;
+        // }
+        &-content__title{
+            color:$br-dark-green;
+            font-family: $font-mono;
+            // margin-bottom: 1rem;
         }
+        &-content__name{
+            color: $lightest-slate;
+            font-family: $font-sans;
+        }
+        &-content__subtitle{
+           color:$slate;
+           margin-bottom: 1rem;
+           font-family: $font-sans;
+        }
+        &-content__describe{
+            color:$slate;
+            margin-bottom: 2rem;
+            font-family: $font-sans;
+            font-size: $fz-lg;
+            // max-width:60%;
+            // width: 70%;
+        }
+        &-content__btn{
+            @include btn;
+            padding: .8rem 1.6rem;
+            font-family: $font-mono;
+
+        }
+
+        //mobile 
+        @media  #{$break1}{
+            // max-width: 100%;
+            &-content__name{
+                font-size: 2rem;
+            }
+            &-content__subtitle{
+                font-size: 2.2rem;
+            }
+            
+        }
+    //tablet view
+    @media  #{$break2}{
+        &-content__name{
+            font-size: 2.6rem;
+        }
+        &-content__subtitle{
+            font-size: 2.8rem;
+        }
+        &-content__describe{
+            // max-width: 80%;
+        }
+
+
     }
+
+    @media  #{$break3}{
+        &-content__name{
+            font-size: 3rem;
+        }
+        &-content__subtitle{
+            font-size: 3.5rem;
+        }
+
+
+    }
+        //desktop view
+        @media #{$break4}{
+            &-content__describe{
+                width:60%;
+                font-size: $fz-lg;       
+            }
+            &-content__name{
+                font-size: 3.5rem;
+            }
+            &-content__subtitle{
+                font-size: 4rem;
+                font-weight: 700;
+            }
+            &-content__btn{
+                font-size: $fz-md;
+            }
+        }
+    }  
+    
+        
     
 }
+
+
+

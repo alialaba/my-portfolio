@@ -10,7 +10,7 @@ export default function (){
             <li className="featured__item grid grid--2-cols list__item ">
                 <div className="project-content">
                     <div className="inner">
-                        <p className="heading-primary">Featured Project</p>
+                        <h2 className="heading-primary">Featured Project</h2>
                         <h3 className="heading-secondary">Build a Banktrans App</h3>
                         <div className="description">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem obcaecati sit aliquid at, explicabo natus

@@ -3,7 +3,7 @@ export default function ExperienceSection(){
         <section className="section">
       <div className="container">
       <div className="title">
-        <h2>experience</h2>
+        <h2>Experience</h2>
         <div className="underline"></div>
       </div>
       <div className="jobs-center">
