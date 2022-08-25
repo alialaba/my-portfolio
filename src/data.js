@@ -36,3 +36,33 @@ export const links=[
     },
 
 ]
+
+// export const contactLinks=[
+
+//     {
+//         id:1,
+//         name: "FiCodepen",
+//         alt: "codepen",
+//         url:"codepen.com"
+//     },
+//     {
+//         id:2,
+//         name: "FiLinkedin",
+//         alt: "linkedin",
+//         url:"linkedin.com"
+
+//     },
+//     {
+//         id:3,
+//         name: "FiTwitter",
+//         alt: "Twitter",
+//         url:"twitter.com"
+//     },
+//     {
+//         id:4,
+//         name: "FiGithub",
+//         alt: "Github",
+//         url:"github.com"
+        
+//     }
+// ]

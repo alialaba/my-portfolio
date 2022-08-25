@@ -268,7 +268,66 @@
         }
     }  
     
+
+    
+
+
+
+    .footer-section{
+        position:relative;
+        &-list{
+            position: fixed;
+            bottom: 0;
+            left:0;
+            right:0;
+            margin-bottom: 100px;
+            display: flex;
+            flex-direction: column;
+            
+
+
+            &::after{
+                position: absolute;
+                content:" ";
+                top:100%;
+                bottom: 0;
+                left:50px;
+                margin:0 auto;
+                width: 1px;
+                height: 100%;
+                background-color: $slate;
+                
+            }
+
+    
+        }
         
+        &-list__item{
+            margin-bottom: 1rem;
+        }
+
+        &-social__link{
+            display: inline-block;
+            text-decoration: none;
+            color:$slate;
+            font-size: 1.2rem;
+
+            &:hover{
+                color:$br-dark-green;
+            }
+        }
+
+
+                //for mobile and tablet view
+      @media #{$break1, $break2}{
+     &-list{
+        display: none;
+    }
+
+}
+    }
+
+
     
 }
 

@@ -5,6 +5,7 @@ import ExperienceSection from "./components/ExperienceSection";
 import Navbar from "./components/Navbar"
 import ProfileSection from "./components/ProfileSection";
 import WorkSection from "./components/WorkSection";
+import SocialCustom from "./components/SocialCustom";
 
 export default function App() {
 
@@ -37,6 +38,7 @@ export default function App() {
   <ExperienceSection/>
   <WorkSection/>
   <ContactSection/>
+  <SocialCustom/>
 </main> 
     </div>
   );
