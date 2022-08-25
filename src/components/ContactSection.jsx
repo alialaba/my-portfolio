@@ -1,38 +1,5 @@
 export default function ContactSection (){
-    return(
-//         <footer classNameName="footer-section">
-//     <div classNameName="container">
-//         <div classNameName="footer-content ">
-//             <ul classNameName="list social">
-//                 <li classNameName="list__item social-item">
-//                     <a href="#" classNameName="social-link">
-                    
-//                     </a>
-//                 </li>
-
-//                 <li classNameName="list__item social-item">
-//                     <a href="#" classNameName="social-link">
-                        
-//                     </a>
-//                 </li>
-//                 <li classNameName="list__item social-item">
-//                     <a href="#"  classNameName="social-link">
-                        
-//                     </a>
-//                 </li>
-//                 <li classNameName="list__item social-item">
-//                     <a href="#" classNameName="social-link">
-                        
-//                     </a>
-//                 </li>
-
-//             </ul>
-//             <div classNameName="comment">
-//                 <p>Design inspiration by Brittany <a>Chiang</a>. Built by <a>Alialaba</a></p>
-//             </div>
-//         </div>
-//     </div>
-// </footer>
+    return(         
 <section className="message-section">
     <div className="container">
         <div className="message padding-md padding-sm">
