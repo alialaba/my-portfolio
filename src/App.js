@@ -38,8 +38,9 @@ export default function App() {
   <ExperienceSection/>
   <WorkSection/>
   <ContactSection/>
-  <SocialCustom/>
+  {/* <SocialCustom/> */}
 </main> 
+<SocialCustom/>
     </div>
   );
 }
