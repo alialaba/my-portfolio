@@ -246,6 +246,8 @@ p, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2rem;
   font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
   font-size: 1.125rem;
+  max-width: 600px;
+  width: 100%;
 }
 
 .main .hero-section-content__btn {
@@ -283,17 +285,23 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 @media (min-width: 769px) and (max-width: 1000px) {
+  .main .hero-section {
+    padding: 4rem 7rem;
+  }
   .main .hero-section-content__name {
     font-size: 3rem;
   }
   .main .hero-section-content__subtitle {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
+    line-height: 1.1;
   }
 }
 
 @media (min-width: 1001px) {
+  .main .hero-section {
+    padding: 4rem 7rem;
+  }
   .main .hero-section-content__describe {
-    width: 60%;
     font-size: 1.125rem;
   }
   .main .hero-section-content__name {
@@ -302,17 +310,23 @@ p, h1, h2, h3, h4, h5, h6 {
   .main .hero-section-content__subtitle {
     font-size: 4rem;
     font-weight: 700;
+    line-height: 1.1;
   }
   .main .hero-section-content__btn {
     font-size: 1rem;
   }
 }
 
-.main .footer-section {
+.main .about-section {
+  background-color: #0a192f;
+  padding: 4rem 0 9.6rem 0;
+}
+
+.footer-section {
   position: relative;
 }
 
-.main .footer-section-list {
+.footer-section-list {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -327,7 +341,7 @@ p, h1, h2, h3, h4, h5, h6 {
           flex-direction: column;
 }
 
-.main .footer-section-list::after {
+.footer-section-list::after {
   position: absolute;
   content: " ";
   top: 100%;
@@ -339,23 +353,23 @@ p, h1, h2, h3, h4, h5, h6 {
   background-color: #8892b0;
 }
 
-.main .footer-section-list__item {
+.footer-section-list__item {
   margin-bottom: 1rem;
 }
 
-.main .footer-section-social__link {
+.footer-section-social__link {
   display: inline-block;
   text-decoration: none;
   color: #8892b0;
   font-size: 1.2rem;
 }
 
-.main .footer-section-social__link:hover {
+.footer-section-social__link:hover {
   color: #64ffda;
 }
 
 @media (max-width: 499px), (min-width: 500px) and (max-width: 768px) {
-  .main .footer-section-list {
+  .footer-section-list {
     display: none;
   }
 }
